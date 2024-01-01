@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% for movie in movies %}
+    <h1>Movie Name:{{ movie.name | upper }}</h1>
+    <h3>Year Is:{{ movie.year }}</h3>
+    <p>{{ movie.summary }}</p>
+    {% if movie.success %}
+        <div style="background-color: green; width: 50px; height: 50px;"></div>
+    {% else %}
+        <div style="background-color: red; width: 50px; height: 50px;"></div>
+    {% endif %}
+{% endfor %}
+</body>
+</html>
